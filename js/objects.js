@@ -1,7 +1,8 @@
 ///////////////////////////////////////////////////////////
 // Объекты
 
-class Player {
+class Player 
+{
 	constructor(name, x, y, px, py, w, h, vector, speed, maxSpeed, angle, delay, color){
 		this.name = name || 'Player';
 		this.x = x || (width/2 - pw/2);		//	координаты X, Y
@@ -25,7 +26,8 @@ class Player {
 	} 
 }
 
-class Bullet {
+class Bullet 
+{
 	constructor(name, x, y, vx, vy, px, py, angle, speed, damage, health, color){
 		this.name = name || 'b';
 		this.x = x || (width/2 - w/2);		//	координаты X, Y
@@ -44,7 +46,8 @@ class Bullet {
 	}
 }
 
-class Wall {
+class Wall 
+{
 	constructor(x, y, type, zlayer, health, color){
 		this.x = x || 0;					//	координаты X, Y
 		this.y = y || 0;					//	

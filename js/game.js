@@ -7,8 +7,6 @@ document.onkeyup = keyUp;
 
 var blocVector = 0;
 
-///////////////////////////////////////////////////////////
-
 function Random(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
@@ -29,7 +27,6 @@ function mousemove(event) {
         mouseY = event.clientY - (height/2)+hero.y;
 	}
 } 
-
 
 
 // Клавиатура
@@ -56,6 +53,7 @@ function keyDown(e){
 		cy = 0;
 	}
 }
+
 function keyUp(e){
 	if ((e.keyCode == 38) || (e.keyCode == 87)){
 		btnUp = false;
@@ -108,7 +106,6 @@ let r=0;
 
 
 // Mouse DOWN
-
 window.addEventListener("mousedown", (downe) => {
   if (downe.button !== 0) return;
   const interval = setInterval(newBullet(hero.x, hero.y, mouseX, mouseY), 1000/60);
@@ -162,14 +159,6 @@ var drawWall = function(x, y, w, h, color) {
 		ctx.fillStyle = color;
 		ctx.fillRect(x-camera.x, y-camera.y, w, h);
 	} 
-
-
-
-
-
-
-
-
 
 var hero = new Player (
 	name = "hero",
@@ -279,10 +268,7 @@ function drawInfo() {
 
 	drawText('concatenate='+Concatenate(), 10, 100);
 
-	drawText('vx='+getX(hero.x, hero.y, mouseX, mouseY)+' vy='+getY(hero.x, hero.y, mouseX, mouseY), 10, 140);
-	
-	
-	
+	drawText('vx='+getX(hero.x, hero.y, mouseX, mouseY)+' vy='+getY(hero.x, hero.y, mouseX, mouseY), 10, 140);	
 }
 
 function draw(){
@@ -293,8 +279,7 @@ function draw(){
 	drawBullets();
 	hero.drawGun();
 	drawInfo();
-	camera.move(cx, cy);
-	
+	camera.move(cx, cy);	
 }
 
 

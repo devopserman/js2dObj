@@ -1,6 +1,3 @@
-///////////////////////////////////////////////////////////
-// Объекты
-
 class Player 
 {
 	constructor(name, x, y, px, py, w, h, vector, speed, maxSpeed, angle, delay, color){
@@ -55,6 +52,6 @@ class Wall
 		this.zlayer = zlayer || 0;			//	слой отрисовки (0-стены, -1 - вода, 1-деревья, 2-облака)
 		this.health = health || 100;		//	
 		this.color = color || colors[Random(0, colors.length)];//	
-	}		
+	}	
 }
-//////////////////////////////////////////////////////
+	
